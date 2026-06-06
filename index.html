@@ -946,7 +946,7 @@ footer {
   .reagent-wrap { grid-template-columns: 1fr; }
   .flask-big { display: none; }
   .footer-top { grid-template-columns: 1fr 1fr; }
-  .steps-grid::before { display: none; }
+  .sem-grid { grid-template-columns: repeat(2, 1fr) !important; }
   .form-row { grid-template-columns: 1fr; }
 }
 
@@ -1007,7 +1007,7 @@ footer {
         <a href="#reagent" class="btn btn-reagent">🧪 Buy me a Reagent</a>
       </div>
       <div class="hero-stats">
-        <div><span class="stat-num">8</span><span class="stat-lbl">Semesters</span></div>
+        <div><span class="stat-num">4</span><span class="stat-lbl">Semesters</span></div>
         <div><span class="stat-num">100%</span><span class="stat-lbl">Free Content</span></div>
         <div><span class="stat-num">1:1</span><span class="stat-lbl">Guidance Sessions</span></div>
         <div><span class="stat-num">UHS</span><span class="stat-lbl">Aligned</span></div>
@@ -1020,12 +1020,12 @@ footer {
         <div class="float-card fc-2">✅ Verified by batch leader</div>
         <div class="hero-card">
           <div class="hc-label">📄 Latest Upload</div>
-          <div class="hc-title">Clinical Microbiology — Semester 5</div>
+          <div class="hc-title">Hematology-I — Semester 3</div>
           <div class="hc-tags">
-            <span class="tag">Gram Staining</span>
-            <span class="tag">Culture Media</span>
-            <span class="tag">MIC Testing</span>
-            <span class="tag">Sensitivity</span>
+            <span class="tag">HM-I</span>
+            <span class="tag">HP-I Histopathology</span>
+            <span class="tag">Gen Pathology</span>
+            <span class="tag">EPC-1</span>
           </div>
           <div class="hc-meta">
             <span>By Faizan Ishaq · MLT</span>
@@ -1113,121 +1113,232 @@ footer {
     <div class="section-title">Pick your semester</div>
     <p class="section-sub">4 semesters of B.Sc. MLT covered. Click a semester to see available resources and download them free.</p>
 
-    <div class="sem-grid">
+    <div class="sem-grid" style="grid-template-columns: repeat(4, 1fr);">
       <div class="sem-card" onclick="showSem(1, this)">
         <span class="sem-num">1</span>
         <div class="sem-lbl">Semester</div>
+        <div class="sem-subjects">Coming Soon</div>
       </div>
       <div class="sem-card" onclick="showSem(2, this)">
         <span class="sem-num">2</span>
         <div class="sem-lbl">Semester</div>
+        <div class="sem-subjects">Coming Soon</div>
       </div>
       <div class="sem-card" onclick="showSem(3, this)">
+        <div class="new-badge">LIVE</div>
         <span class="sem-num">3</span>
         <div class="sem-lbl">Semester</div>
+        <div class="sem-subjects">HM-I · HP-I · GPA · ICT</div>
       </div>
       <div class="sem-card" onclick="showSem(4, this)">
+        <div class="new-badge">LIVE</div>
         <span class="sem-num">4</span>
         <div class="sem-lbl">Semester</div>
-      </div>
-
-    <!-- Resource panels — paste your real Google Drive links into href="" below -->
-    <div class="sem-panel" id="panel-5">
-      <div class="sem-panel-header">
-        <div>
-          <div class="sem-panel-title">Semester 5 Resources</div>
-          <p style="font-size:0.85rem; color:var(--muted); margin-top:4px;">Clinical Microbiology · Histopathology · Immunology</p>
-        </div>
-        <span class="tag-green">All Free</span>
-      </div>
-      <div class="resource-list">
-        <div class="resource-item">
-          <div class="resource-info">
-            <span class="resource-icon">📘</span>
-            <div>
-              <span class="resource-name">Clinical Microbiology Practical Book</span>
-              <span class="resource-meta">PDF · 42 pages · Gram staining, Culture media, MIC</span>
-            </div>
-          </div>
-          <!-- REPLACE href with your actual Google Drive share link -->
-          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Microbiology Practical Book')">⬇ Download</a>
-        </div>
-        <div class="resource-item">
-          <div class="resource-info">
-            <span class="resource-icon">📗</span>
-            <div>
-              <span class="resource-name">Hematology MCQ Bank (100 Questions)</span>
-              <span class="resource-meta">PDF · Leucopoiesis, Disorders, Cytochemistry</span>
-            </div>
-          </div>
-          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading MCQ Bank')">⬇ Download</a>
-        </div>
-        <div class="resource-item">
-          <div class="resource-info">
-            <span class="resource-icon">📙</span>
-            <div>
-              <span class="resource-name">Histopathology — H&amp;E Staining Guide</span>
-              <span class="resource-meta">PDF · Tissue processing, stain interpretation</span>
-            </div>
-          </div>
-          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Histopathology Guide')">⬇ Download</a>
-        </div>
-        <div class="resource-item">
-          <div class="resource-info">
-            <span class="resource-icon">📕</span>
-            <div>
-              <span class="resource-name">Viva Prep — Semester 5 Questions</span>
-              <span class="resource-meta">PDF · Coming soon</span>
-            </div>
-          </div>
-          <span class="btn-soon">⏳ Coming Soon</span>
-        </div>
+        <div class="sem-subjects">HM-II · HP-II · Mic-I · BMB</div>
       </div>
     </div>
 
-    <!-- Generic panels for other semesters -->
+    <!-- Semester 1 panel -->
     <div class="sem-panel" id="panel-1">
       <div class="sem-panel-header">
         <div class="sem-panel-title">Semester 1 — Coming Soon</div>
       </div>
       <p style="color:var(--muted); font-size:0.9rem;">Resources for Semester 1 are being prepared. Check back soon or book a session with Faizan for direct guidance.</p>
     </div>
-    <div class="sem-panel" id="panel-2"><div class="sem-panel-header"><div class="sem-panel-title">Semester 2 — Coming Soon</div></div><p style="color:var(--muted); font-size:0.9rem;">Resources being prepared. Book a session for guidance in the meantime.</p></div>
+
+    <!-- Semester 2 panel -->
+    <div class="sem-panel" id="panel-2">
+      <div class="sem-panel-header">
+        <div class="sem-panel-title">Semester 2 — Coming Soon</div>
+      </div>
+      <p style="color:var(--muted); font-size:0.9rem;">Resources for Semester 2 are being prepared. Book a session for guidance in the meantime.</p>
+    </div>
+
+    <!-- Semester 3 panel -->
     <div class="sem-panel" id="panel-3">
       <div class="sem-panel-header">
         <div>
           <div class="sem-panel-title">Semester 3 Resources</div>
-          <p style="font-size:0.85rem; color:var(--muted); margin-top:4px;">Hematology · Clinical Microbiology I</p>
+          <p style="font-size:0.85rem; color:var(--muted); margin-top:4px;">21 Credit Hours · UHS B.Sc. MLT</p>
         </div>
         <span class="tag-green">All Free</span>
       </div>
       <div class="resource-list">
         <div class="resource-item">
           <div class="resource-info">
-            <span class="resource-icon">📘</span>
+            <span class="resource-icon">🧬</span>
             <div>
-              <span class="resource-name">Hematology Practical Book (Full)</span>
-              <span class="resource-meta">PDF · TLC, WBC differential, Bone Marrow, Cytochemical stains</span>
+              <span class="resource-name">HM-I — Hematology-I</span>
+              <span class="resource-meta">Notes, practical book &amp; MCQ bank</span>
             </div>
           </div>
-          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Hematology Book')">⬇ Download</a>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Hematology-I')">⬇ Download</a>
         </div>
         <div class="resource-item">
           <div class="resource-info">
-            <span class="resource-icon">📗</span>
+            <span class="resource-icon">🔬</span>
             <div>
-              <span class="resource-name">Cytochemical Stains Guide (SBB, MPO, PAS, Esterases, LAP)</span>
-              <span class="resource-meta">PDF · Diagram references included</span>
+              <span class="resource-name">HP-I — Histopathology-I</span>
+              <span class="resource-meta">H&amp;E staining, tissue processing, practical guide</span>
             </div>
           </div>
-          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Cytochemical Stains Guide')">⬇ Download</a>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Histopathology-I')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">🫀</span>
+            <div>
+              <span class="resource-name">GPA — General Pathology</span>
+              <span class="resource-meta">Lecture notes &amp; viva prep</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading General Pathology')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">💻</span>
+            <div>
+              <span class="resource-name">GEICT — Applications of ICT</span>
+              <span class="resource-meta">Notes &amp; assignments</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading ICT Notes')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">🤝</span>
+            <div>
+              <span class="resource-name">GECCM — Civics &amp; Community Engagement</span>
+              <span class="resource-meta">Notes &amp; reflective writing guide</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Civics Notes')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">💼</span>
+            <div>
+              <span class="resource-name">GEE — Entrepreneurship</span>
+              <span class="resource-meta">Notes, case studies &amp; assignments</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Entrepreneurship Notes')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">📝</span>
+            <div>
+              <span class="resource-name">EPC-1 — English Proficiency 1</span>
+              <span class="resource-meta">Essay writing, grammar &amp; practice exercises</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading EPC-1 Material')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">📓</span>
+            <div>
+              <span class="resource-name">PERL-III — Reflective Journal Guide</span>
+              <span class="resource-meta">Gibbs Reflective Cycle templates &amp; sample entries</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading PERL-III Guide')">⬇ Download</a>
         </div>
       </div>
     </div>
-    <div class="sem-panel" id="panel-4"><div class="sem-panel-header"><div class="sem-panel-title">Semester 4 — Coming Soon</div></div><p style="color:var(--muted); font-size:0.9rem;">Resources being prepared.</p></div>
-    <div class="sem-panel" id="panel-6"><div class="sem-panel-header"><div class="sem-panel-title">Semester 6 — Coming Soon</div></div><p style="color:var(--muted); font-size:0.9rem;">Resources being prepared.</p></div>
-    <div class="sem-panel" id="panel-7"><div class="sem-panel-header"><div class="sem-panel-title">Semester 7 — Coming Soon</div></div><p style="color:var(--muted); font-size:0.9rem;">Resources being prepared.</p></div>
-    <div class="sem-panel" id="panel-8"><div class="sem-panel-header"><div class="sem-panel-title">Semester 8 — Coming Soon</div></div><p style="color:var(--muted); font-size:0.9rem;">Resources being prepared.</p></div>
+
+    <!-- Semester 4 panel -->
+    <div class="sem-panel" id="panel-4">
+      <div class="sem-panel-header">
+        <div>
+          <div class="sem-panel-title">Semester 4 Resources</div>
+          <p style="font-size:0.85rem; color:var(--muted); margin-top:4px;">20 Credit Hours · UHS B.Sc. MLT</p>
+        </div>
+        <span class="tag-green">All Free</span>
+      </div>
+      <div class="resource-list">
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">🧬</span>
+            <div>
+              <span class="resource-name">HM-II — Hematology-II</span>
+              <span class="resource-meta">Advanced hematology, disorders, MCQ bank</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Hematology-II')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">🔬</span>
+            <div>
+              <span class="resource-name">HP-II — Histopathology-II</span>
+              <span class="resource-meta">Advanced staining, special techniques, practical book</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Histopathology-II')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">🦠</span>
+            <div>
+              <span class="resource-name">Mic-I — Microbiology-I (Basic Bacteriology)</span>
+              <span class="resource-meta">Gram staining, culture media, sensitivity testing, practical guide</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Microbiology-I')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">⚗️</span>
+            <div>
+              <span class="resource-name">Chemical Pathology-I</span>
+              <span class="resource-meta">Clinical chemistry, ISEs, analyzer notes</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Chemical Pathology-I')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">🧪</span>
+            <div>
+              <span class="resource-name">BMB — Basic Molecular Biology</span>
+              <span class="resource-meta">DNA, PCR, molecular techniques notes</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Molecular Biology Notes')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">🇵🇰</span>
+            <div>
+              <span class="resource-name">PS — Pakistan Studies</span>
+              <span class="resource-meta">Notes &amp; important topics</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading Pakistan Studies Notes')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">📝</span>
+            <div>
+              <span class="resource-name">EPC-2 — English Proficiency 2</span>
+              <span class="resource-meta">Academic writing, reading comprehension &amp; practice</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading EPC-2 Material')">⬇ Download</a>
+        </div>
+        <div class="resource-item">
+          <div class="resource-info">
+            <span class="resource-icon">📓</span>
+            <div>
+              <span class="resource-name">PERL-IV — Reflective Journal Guide</span>
+              <span class="resource-meta">Gibbs Reflective Cycle templates &amp; sample entries</span>
+            </div>
+          </div>
+          <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="btn-download" onclick="toast('Downloading PERL-IV Guide')">⬇ Download</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1301,8 +1412,6 @@ footer {
                 <option value="">Select semester</option>
                 <option>Semester 1</option><option>Semester 2</option>
                 <option>Semester 3</option><option>Semester 4</option>
-                <option>Semester 5</option><option>Semester 6</option>
-                <option>Semester 7</option><option>Semester 8</option>
               </select>
             </div>
           </div>
