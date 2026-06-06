@@ -89,7 +89,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(249,247,244,0.93);backdrop
 .sem-panel.visible{display:block}
 .sem-panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
 .sem-panel-title{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink)}
-.resource-list{display:flex;flex-direction:column;gap:0.75rem}
+.resource-list{display:flex;flex-direction:column;gap:0.6rem}
 .resource-item{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 1.1rem;background:var(--surface);border-radius:var(--radius-sm);border:1px solid var(--border);transition:background 0.2s}
 .resource-item:hover{background:var(--teal-pale)}
 .resource-info{display:flex;align-items:center;gap:12px}
@@ -99,6 +99,33 @@ nav{position:sticky;top:0;z-index:200;background:rgba(249,247,244,0.93);backdrop
 .btn-download{display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:white;padding:7px 16px;border-radius:999px;font-size:0.78rem;font-weight:600;text-decoration:none;transition:background 0.2s;white-space:nowrap;flex-shrink:0}
 .btn-download:hover{background:var(--teal-light)}
 .btn-soon{display:inline-flex;align-items:center;gap:6px;background:var(--surface);color:var(--muted);border:1px solid var(--border);padding:7px 16px;border-radius:999px;font-size:0.78rem;font-weight:600;white-space:nowrap;flex-shrink:0}
+
+/* ── SUBJECT CARDS WITH SUB-LINKS ── */
+.subject-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;transition:box-shadow 0.2s}
+.subject-card:hover{box-shadow:var(--shadow-md)}
+.subject-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;cursor:pointer;transition:background 0.2s;user-select:none}
+.subject-header:hover{background:var(--teal-pale)}
+.subject-header.open{background:var(--teal-pale);border-bottom:1px solid var(--border)}
+.subject-left{display:flex;align-items:center;gap:12px}
+.subject-icon{font-size:20px;flex-shrink:0}
+.subject-name{font-size:0.92rem;font-weight:600;color:var(--ink);display:block}
+.subject-desc{font-size:0.73rem;color:var(--muted);margin-top:1px}
+.subject-chevron{font-size:0.75rem;color:var(--muted);transition:transform 0.25s;flex-shrink:0;margin-left:8px}
+.subject-header.open .subject-chevron{transform:rotate(180deg)}
+.subject-links{display:none;padding:0.75rem 1rem 0.85rem 1rem;background:var(--surface)}
+.subject-links.open{display:block;animation:fadeUp 0.2s ease}
+.sublink-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:0.5rem}
+.sublink{display:flex;align-items:center;gap:8px;padding:9px 13px;border-radius:var(--radius-sm);font-size:0.8rem;font-weight:500;text-decoration:none;transition:all 0.18s;border:1px solid transparent}
+.sublink-mcq{background:#FAEEDA;color:var(--amber);border-color:rgba(186,117,23,0.2)}
+.sublink-mcq:hover{background:#F5D49A;border-color:var(--amber-mid)}
+.sublink-notes{background:var(--teal-pale);color:var(--teal);border-color:var(--border)}
+.sublink-notes:hover{background:#B8EDD8;border-color:var(--teal-mid)}
+.sublink-practical{background:#EAF3DE;color:var(--green-text);border-color:rgba(59,109,17,0.15)}
+.sublink-practical:hover{background:#CFECAD;border-color:var(--green-bdr)}
+.sublink-viva{background:#EEEDFE;color:#4B45B2;border-color:rgba(75,69,178,0.15)}
+.sublink-viva:hover{background:#D5D3FA;border-color:#8B87D8}
+.sublink-soon{background:var(--surface);color:var(--muted);border-color:var(--border);cursor:default;opacity:0.65}
+.sublink-icon{font-size:14px;flex-shrink:0}
 
 /* ── MENTORSHIP SECTION ── */
 .mentorship-wrap{display:grid;grid-template-columns:360px 1fr;gap:2.5rem;align-items:start}
@@ -302,7 +329,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
         <span class="tag-green">All Free</span>
       </div>
       <div class="resource-list">
- 
+
         <!-- HM-I -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -318,7 +345,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- HP-I -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -334,7 +361,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- GPA -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -350,7 +377,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- GEICT -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -366,7 +393,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- GECCM -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -382,7 +409,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- GEE -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -398,7 +425,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- EPC-1 -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -414,7 +441,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- PERL-III -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -430,7 +457,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
       </div>
     </div>
     <div class="sem-panel" id="panel-4">
@@ -439,7 +466,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
         <span class="tag-green">All Free</span>
       </div>
       <div class="resource-list">
- 
+
         <!-- HM-II -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -455,7 +482,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- HP-II -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -471,7 +498,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- Mic-I -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -487,7 +514,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- Chemical Pathology-I -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -503,7 +530,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- BMB -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -519,7 +546,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- Pakistan Studies -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -535,7 +562,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- EPC-2 -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -551,7 +578,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
         <!-- PERL-IV -->
         <div class="subject-card">
           <div class="subject-header" onclick="toggleSubject(this)">
@@ -567,11 +594,12 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
             </div>
           </div>
         </div>
- 
+
       </div>
     </div>
   </div>
 </section>
+
 <div class="divider"></div>
 
 <section id="mentorship" class="section">
@@ -587,14 +615,16 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
         <div class="mentor-name">Faizan Ishaq</div>
         <div class="mentor-role">B.Sc. MLT · DGKMC, D.G. Khan · Batch Leader</div>
         <div class="mentor-tags">
-          <span class="tag">Aspire Leaders Program Alumnus</span>
+          <span class="tag">Aspire Leaders Program</span>
+          <span class="tag">Harvard Initiative</span>
           <span class="tag">Student Welfare Foundation</span>
         </div>
         <p class="mentor-bio">Clinical rotations across hematology, microbiology, histopathology &amp; clinical chemistry. Passionate about elevating MLT professionals across Pakistan.</p>
         <div class="session-list">
           <div class="session-item"><span class="session-icon">🔬</span><div><strong>Practical &amp; Viva Prep</strong><span>Walk through lab techniques before your exam</span></div></div>
           <div class="session-item"><span class="session-icon">📚</span><div><strong>Subject Deep Dives</strong><span>Break down a confusing topic together</span></div></div>
-          <div class="session-item"><span class="session-icon">📝</span><div><strong>Student Portfolios</strong><span>Portfolios Preparations</span></div></div>
+          <div class="session-item"><span class="session-icon">🎓</span><div><strong>Career Guidance</strong><span>MPhil, Shaukat Khanum, career paths after MLT</span></div></div>
+          <div class="session-item"><span class="session-icon">📝</span><div><strong>CV &amp; Applications</strong><span>Cover letters, hospital jobs, portfolios</span></div></div>
         </div>
       </div>
 
@@ -682,7 +712,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
     </div>
     <div class="footer-bottom">
       <span>© 2026 LabLeaf · Made for MLT students, by an MLT student.</span>
-      <span>Pakistan</span>
+      <span>D.G. Khan, Punjab, Pakistan</span>
     </div>
   </div>
 </footer>
@@ -699,7 +729,12 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
     const panel=document.getElementById('panel-'+n);
     if(panel){panel.classList.add('visible');setTimeout(()=>panel.scrollIntoView({behavior:'smooth',block:'nearest'}),100);}
   }
-  function setTier(btn){document.querySelectorAll('.tier-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}
+  function toggleSubject(header){
+    const links=header.nextElementSibling;
+    const isOpen=header.classList.contains('open');
+    header.classList.toggle('open',!isOpen);
+    links.classList.toggle('open',!isOpen);
+  }
   function toast(msg){const t=document.getElementById('toast');t.textContent='✅ '+msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);}
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',function(e){
